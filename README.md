@@ -28,3 +28,5 @@ module "static_website" {
 * `bucket_id`
 * `bucket_arn`
 * `bucket_domain_name` - for CloudFront distribution
+* `website_endpoint` 
+* `website_domain` 
