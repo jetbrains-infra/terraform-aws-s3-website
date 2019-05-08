@@ -21,4 +21,5 @@ locals {
   name      = "${var.bucket}"
   index_doc = "${var.index_doc}"
   error_doc = "${var.error_doc}"
+  acl       = "${var.acl}"
 }
