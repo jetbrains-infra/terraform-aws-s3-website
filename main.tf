@@ -6,15 +6,24 @@ resource "aws_s3_bucket" "web" {
     index_document = "${local.index_doc}"
     error_document = "${local.error_doc}"
   }
+
+  tags {
+    Project = "${local.project}"
+  }
+
+  versioning {
+    enabled = "${local.versioning}"
+  }
 }
 
 data "aws_iam_policy_document" "read_only" {
   statement {
     resources = ["arn:aws:s3:::${aws_s3_bucket.web.bucket}/*"]
     actions   = ["s3:GetObject"]
+
     principals {
       identifiers = ["*"]
-      type = "*"
+      type        = "*"
     }
   }
 }
