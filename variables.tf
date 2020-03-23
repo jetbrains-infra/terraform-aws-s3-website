@@ -1,5 +1,5 @@
 variable "bucket" {
-  description = "Bucket name"
+  description = "Bucket name."
 }
 
 variable "index_doc" {
@@ -13,7 +13,7 @@ variable "error_doc" {
 }
 
 variable "acl" {
-  description = "Bucket ACL name"
+  description = "Bucket ACL name."
   default     = "public-read"
 }
 
@@ -23,14 +23,20 @@ variable "versioning" {
 }
 
 variable "project" {
-  description = "Project tag"
+  description = "Project tag."
+}
+
+variable "force_destroy" {
+  description = "Allow delete bucket with its content."
+  default     = false
 }
 
 locals {
-  project    = var.project
-  name       = var.bucket
-  index_doc  = var.index_doc
-  error_doc  = var.error_doc
-  acl        = var.acl
-  versioning = var.versioning
+  project       = var.project
+  name          = var.bucket
+  index_doc     = var.index_doc
+  error_doc     = var.error_doc
+  acl           = var.acl
+  versioning    = var.versioning
+  force_destroy = var.force_destroy
 }

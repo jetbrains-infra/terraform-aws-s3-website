@@ -8,9 +8,10 @@ Terraform module to create S3 bucket to host static website:
 
 ### Optional params with default values
 
-* `index_doc` - Default index document (Default `index.html`)
-* `error_doc` - Default error document (Default `error.html`)
-* `acl` - Bucket ACL name (Default `public-read`)
+* `index_doc` - Default index document (Default `index.html`).
+* `error_doc` - Default error document (Default `error.html`).
+* `acl` - Bucket ACL name (Default `public-read`).
+* `force_destroy` - Allow delete bucket with its content (Default `false`).
 
 ## Usage
 

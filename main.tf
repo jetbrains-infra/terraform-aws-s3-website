@@ -1,6 +1,7 @@
 resource "aws_s3_bucket" "web" {
-  bucket = local.name
-  acl    = local.acl
+  bucket        = local.name
+  acl           = local.acl
+  force_destroy = local.force_destroy
 
   website {
     index_document = local.index_doc
